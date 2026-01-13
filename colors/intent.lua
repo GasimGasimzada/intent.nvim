@@ -6,26 +6,7 @@ local function create_color_scheme()
 
 	vim.g.colors_name = "intent"
 
-	local colors = {
-		bg = "#0c0c0e",
-		bg_alt = "#111114",
-		bg_alt2 = "#16161b",
-		fg = "#ffffff",
-		fg_mid = "#b8b8b8",
-		fg_dim = "#6b6b6b",
-
-		green = "#5fff87",
-		green_dim = "#3fa66a",
-		orange = "#ffaf5f",
-		orange_dim = "#c98a44",
-		yellow = "#ffd75f",
-		yellow_dim = "#e6c15a",
-		blue = "#5fafff",
-		magenta = "#d787ff",
-		red = "#ff5f5f",
-		border = "#1a1a1f",
-		visual = "#2a2a2a",
-	}
+	local colors = require("intent.colors")
 
 	local tokens = {
 		function_call = {
@@ -49,6 +30,7 @@ local function create_color_scheme()
 	set_hl("Normal", { fg = colors.fg, bg = colors.bg })
 	set_hl("NormalFloat", { fg = colors.fg, bg = colors.bg_alt })
 	set_hl("FloatBorder", { fg = colors.border, bg = colors.bg_alt })
+	set_hl("FloatFooter", { fg = colors.orange_dim })
 	set_hl("CursorLine", {})
 	set_hl("CursorLineNr", { fg = colors.fg, bold = true })
 	set_hl("LineNr", { fg = colors.fg_dim })
@@ -129,6 +111,36 @@ local function create_color_scheme()
 	set_hl("DiffChange", { fg = colors.blue, bg = "#1b2236" })
 	set_hl("DiffDelete", { fg = colors.red, bg = "#2b1f1f" })
 	set_hl("DiffText", { fg = colors.yellow, bg = "#2a2f4a" })
+
+	-- Markdown & Structured content
+	set_hl("@nospell", {})
+	set_hl("@markup.link", {})
+	set_hl("Title", { fg = colors.orange, bold = true })
+	set_hl("Underlined", { underline = true })
+	set_hl("@markup.list", { fg = colors.fg_dim })
+	set_hl("@markup.list.checked", { fg = colors.orange_dim })
+	set_hl("@markup.link", { fg = colors.fg_dim })
+	set_hl("@markup.link.url", { fg = colors.blue })
+	set_hl("@markup.link.label", { fg = colors.fg })
+	set_hl("@markup.quote", { fg = colors.fg })
+	set_hl("@markup.raw.block", { fg = colors.fg_dim })
+	set_hl("@conceal", { fg = colors.fg_dim })
+	set_hl("@label.markdown", { fg = colors.fg_dim })
+	set_hl("@punctuation.special.markdown", { fg = colors.fg_dim })
+
+	-- Lua
+	set_hl("@constructor.lua", { fg = colors.fg_dim })
+
+	-- Grug far
+	set_hl("GrugFarHelpHeader", { fg = colors.fg_dim })
+	set_hl("GrugFarHelpWinHeader", { fg = colors.fg_dim })
+	set_hl("GrugFarHelpWinActionPrefix", { fg = colors.fg_dim })
+	set_hl("GrugFarHelpWinActionText", { fg = colors.orange })
+	set_hl("GrugFarResultsActionMessage", { fg = colors.orange })
+	set_hl("GrugFarHelpHeader", { fg = colors.fg_dim })
+	set_hl("GrugFarInputPlaceholder", { fg = colors.fg_dim })
+	set_hl("GrugFarResultsHeader", { fg = colors.fg_dim })
+	set_hl("GrugFarResultsPath", { fg = colors.fg_mid, bold = true })
 end
 
 create_color_scheme()

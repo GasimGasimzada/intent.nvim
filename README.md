@@ -22,6 +22,18 @@ Install the theme with your package manager:
 }
 ```
 
+### Integrations
+
+**Lualine:**
+
+This theme is fully compatible with lualine. Just pass the theme to `setup` function:
+
+```lua
+require("lualine").setup({
+  options = { theme = "intent" },
+})
+```
+
 ## Design
 
 The palette is based on my favorite color and what's important in my code:
@@ -42,13 +54,13 @@ This theme is tested and compatible with the following languages and plugins:
 - [x] Typescript
 - [x] JSON
 - [x] Nix
-- [ ] Markdown (partial, WIP)
+- [x] Markdown
 
 ### Plugins
 
 - [x] grug-far.nvim
 - [x] blink.nvim
-- [ ] lualine.nvim (partial, WIP)
+- [x] lualine.nvim
 - [ ] neotree.nvim (WIP)
 - [ ] snacks.nvim picker (WIP)
 - [ ] snacks.lazygit (WIP)
