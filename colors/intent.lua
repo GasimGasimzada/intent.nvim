@@ -167,6 +167,16 @@ local function create_color_scheme()
 	set_hl("NeoTreeGitStaged", { fg = colors.green })
 	set_hl("NeoTreeGitUnstaged", { fg = colors.yellow })
 	set_hl("NeoTreeGitUntracked", { fg = colors.orange })
+
+	-- Snacks
+	set_hl("SnacksPickerCursorLine", { fg = colors.bg, bg = colors.orange_dim, bold = true })
+	set_hl("SnacksPickerListCursorLine", { fg = colors.bg, bg = colors.orange_dim, bold = true })
+	set_hl("SnacksPickerPreviewCursorLine", { fg = colors.bg, bg = colors.orange_dim, bold = true })
+	set_hl("SnacksPickerTitle", { fg = colors.fg_dim, bg = colors.bg_alt })
+	set_hl("SnacksPickerBoxTitle", { fg = colors.fg_dim, bg = colors.bg_alt })
+	set_hl("SnacksPickerListTitle", { fg = colors.fg_dim, bg = colors.bg_alt })
+	set_hl("SnacksPickerPreviewTitle", { fg = colors.fg_dim, bg = colors.bg_alt })
+	set_hl("SnacksPickerTotals", { fg = colors.fg_dim })
 end
 
 create_color_scheme()

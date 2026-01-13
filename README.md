@@ -50,9 +50,9 @@ This theme is tested and compatible with the following languages and plugins:
 
 - [x] Javascript
 - [x] Typescript
-- [x] JSON
 - [x] Nix
 - [x] Markdown
+- [ ] JSON
 
 ### Plugins
 
@@ -60,5 +60,5 @@ This theme is tested and compatible with the following languages and plugins:
 - [x] blink.nvim
 - [x] lualine.nvim
 - [x] neotree.nvim
-- [ ] snacks.nvim picker (WIP)
+- [x] snacks.nvim picker (partial)
 - [ ] snacks.lazygit (WIP)
