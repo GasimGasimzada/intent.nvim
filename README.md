@@ -22,9 +22,7 @@ Install the theme with your package manager:
 }
 ```
 
-### Integrations
-
-**Lualine:**
+### Lualine integration
 
 This theme is fully compatible with lualine. Just pass the theme to `setup` function:
 
@@ -61,6 +59,6 @@ This theme is tested and compatible with the following languages and plugins:
 - [x] grug-far.nvim
 - [x] blink.nvim
 - [x] lualine.nvim
-- [ ] neotree.nvim (WIP)
+- [x] neotree.nvim
 - [ ] snacks.nvim picker (WIP)
 - [ ] snacks.lazygit (WIP)
